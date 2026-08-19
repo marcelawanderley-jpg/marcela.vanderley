@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Blog Vôlei Leão</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f8ff;
+    color: #333;
+}
+
+/* CABEÇALHO */
+
+header {
+    background: linear-gradient(135deg, #071952, #0b60b0);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* MENU */
+
+nav {
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: #0b60b0;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 18px;
+}
+
+nav a:hover {
+    color: #f39c12;
+}
+
+/* IMAGEM DO VÔLEI */
+
+.imagem-volei {
+    width: 100%;
+    max-width: 1100px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    margin: 30px auto;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* CONTEÚDO */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.titulo {
+    text-align: center;
+    color: #0b60b0;
+    margin-bottom: 30px;
+}
+
+.titulo h2 {
+    font-size: 32px;
+}
+
+.titulo p {
+    margin-top: 8px;
+    color: #666;
+}
+
+/* NOTÍCIAS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    border-top: 6px solid #f39c12;
+    box-shadow: 0 5px 18px rgba(11,96,176,0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card h3 {
+    color: #0b60b0;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* BOTÃO LIKE */
+
+.acoes {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.like-btn {
+    background: white;
+    border: 2px solid #f39c12;
+    color: #e67e22;
+    padding: 10px 17px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.like-btn:hover {
+    background: #f39c12;
+    color: white;
+}
+
+.like-btn.liked {
+    background: #f39c12;
+    color: white;
+}
+
+.likes {
+    color: #0b60b0;
+    font-weight: bold;
+}
+
+/* CAMPEONATOS */
+
+.campeonatos {
+    margin-top: 50px;
+    background: linear-gradient(135deg, #071952, #0b60b0);
+    color: white;
+    padding: 35px;
+    border-radius: 20px;
+}
+
+.campeonatos h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.campeonatos p {
+    background: rgba(255,255,255,0.15);
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* AVISOS */
+
+.aviso {
+    margin-top: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 7px solid #f39c12;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.aviso h2 {
+    color: #0b60b0;
+    margin-bottom: 10px;
+}
+
+.aviso p {
+    line-height: 1.6;
+    color: #666;
+}
+
+/* RODAPÉ */
+
+footer {
+    margin-top: 60px;
+    background: #071952;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer strong {
+    color: #f39c12;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px;
+    }
+
+    .imagem-volei {
+        height: 250px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>🏐 BLOG VÔLEI LEÃO</h1>
+
+    <p>
+        Notícias, jogos, campeonatos, jogadores e novidades do mundo do vôlei!
+    </p>
+
+</header>
+
+
+<nav>
+
+    <a href="#inicio">Início</a>
+
+    <a href="#noticias">Notícias</a>
+
+    <a href="#campeonatos">Campeonatos</a>
+
+    <a href="#avisos">Avisos</a>
+
+</nav>
+
+
+<main class="container" id="inicio">
+
+
+<!-- FOTO DO VÔLEI -->
+
+<img
+src="unnamed (2) (2).jpg"
+alt="Quadra de vôlei"
+class="imagem-volei"
+>
+
+
+<div class="titulo" id="noticias">
+
+    <h2>🏐 Notícias do Vôlei</h2>
+
+    <p>
+        Fique por dentro das principais novidades do mundo do vôlei!
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+
+<!-- CARD 1 -->
+
+<div class="card">
+
+    <h3>🏐 Treinos e Preparação</h3>
+
+    <p>
+        Os atletas estão se preparando com muita dedicação,
+        realizando treinos de saque, recepção, levantamento,
+        ataque e defesa para melhorar o desempenho em quadra.
+    </p>
+
+    <div class="acoes">
+
+        <button class="like-btn" onclick="curtir(this)">
+            ❤️ Curtir
+        </button>
+
+        <span class="likes">
+            <span>0</span> curtidas
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- CARD 2 -->
+
+<div class="card">
+
+    <h3>🏆 Campeonatos</h3>
+
+    <p>
+        Acompanhe os principais campeonatos de vôlei,
+        os resultados das partidas, as equipes participantes
+        e os grandes destaques de cada competição.
+    </p>
+
+    <div class="acoes">
+
+        <button class="like-btn" onclick="curtir(this)">
+            ❤️ Curtir
+        </button>
+
+        <span class="likes">
+            <span>0</span> curtidas
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- CARD 3 -->
+
+<div class="card">
+
+    <h3>⭐ Destaques dos Atletas</h3>
+
+    <p>
+        Conheça os atletas que estão se destacando em quadra
+        com grandes ataques, bloqueios, defesas e jogadas
+        que fazem a diferença durante as partidas.
+    </p>
+
+    <div class="acoes">
+
+        <button class="like-btn" onclick="curtir(this)">
+            ❤️ Curtir
+        </button>
+
+        <span class="likes">
+            <span>0</span> curtidas
+        </span>
+
+    </div>
+
+</div>
+
+</div>
+
+
+<!-- CAMPEONATOS -->
+
+<section class="campeonatos" id="campeonatos">
+
+    <h2>🏆 Agenda de Campeonatos</h2>
+
+    <p>🏐 Campeonato Escolar — Jogos entre equipes estudantis</p>
+
+    <p>🥇 Torneio Regional — Competição entre equipes da região</p>
+
+    <p>🏆 Campeonato Estadual — Grandes equipes em busca do título</p>
+
+    <p>🌎 Campeonato Nacional — Disputa entre equipes de todo o país</p>
+
+    <p>⭐ Festival de Vôlei — Evento especial para atletas e fãs</p>
+
+</section>
+
+
+<!-- AVISOS -->
+
+<section class="aviso" id="avisos">
+
+    <h2>📢 Avisos do Blog</h2>
+
+    <p>
+        Acompanhe o Blog Vôlei Leão para ficar por dentro
+        dos próximos jogos, resultados, campeonatos,
+        curiosidades, notícias e tudo sobre o mundo do vôlei.
+    </p>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 <strong>Blog Vôlei Leão</strong>
+    </p>
+
+    <p>
+        Feito com 🏐💙 para todos os fãs de vôlei!
+    </p>
+
+</footer>
+
+
+<script>
+
+function curtir(botao) {
+
+    let contador = botao.parentElement
+        .querySelector(".likes span");
+
+    let numero = parseInt(contador.textContent);
+
+    if (botao.classList.contains("liked")) {
+
+        numero--;
+
+        botao.classList.remove("liked");
+
+        botao.innerHTML = "❤️ Curtir";
+
+    } else {
+
+        numero++;
+
+        botao.classList.add("liked");
+
+        botao.innerHTML = "💖 Curtido";
+
+    }
+
+    contador.textContent = numero;
+}
+
+</script>
+
+
+</body>
+</html>
+
